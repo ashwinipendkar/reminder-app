@@ -35,6 +35,11 @@ const showNotification = (reminder) => {
           { action: "snooze", title: "⏳ Snooze" },
           { action: "dismiss", title: "❌ Dismiss" },
         ],
+        data: {
+          leadId: reminder.leadId,
+          leadName: reminder.leadMetaDetails.leadName,
+          reminderMessage: reminder.reminderMessage,
+        },
       });
     });
   }
